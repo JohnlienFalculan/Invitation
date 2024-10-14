@@ -1,0 +1,110 @@
+
+html{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: rgb(100, 68, 97);
+}
+
+button{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    height: auto;
+    width: 200px;
+    padding: 16px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 105, 210);
+    transition: 0.8s;
+}
+
+button:before{
+    background-color: violet;
+}
+
+button:hover{
+    background-color: violet;
+}
+
+#Proceed{
+    font-size: 32px;
+    width:auto;
+    height: 72px;
+}
+
+.container {
+    transition: 0.8s ease-in;
+    border-radius: 12px;
+    background-color: rgb(253, 196, 255);
+    height: fit-content;
+    width: fit-content;
+    padding: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    width: 100%;
+    border: 0.3px solid;
+}
+
+th{
+    background-color: rgb(255, 105, 210);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.btnChoices{
+    background-color: rgb(255, 105, 210);
+    padding: 12px;
+    flex: 1 0 100px;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .container {
+        height: fit-content;
+        width: fit-content;
+        padding: 20px;
+        h1{
+            font-size: 16px;
+        }
+        p{
+            font-size: 12px;
+        }
+        img{
+            height: 200px;
+        }
+    }
+    button{
+        color: rgb(154, 154, 154);
+        background-color: rgb(255, 197, 238);
+        transition: 0.8s;
+        height: fit-content;
+        width: fit-content;
+    }
+    .btnChoices{
+        font-size: 12px;
+        color: aliceblue;
+        width: fit-content;
+        height: auto;
+        flex: 1 1 100px;
+    }
+    
+}

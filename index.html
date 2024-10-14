@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="Text">Will you go out with me on October 15?</h1>
+        <img src="/car.gif"> <br>
+        <p>This is me btw.</p>
+        <button onclick="yesSelected()"  id="Yes">YES</button>
+        <button onclick="noSelected()" id="No">NO</button>
+    </div>
+    <script>
+        function yesSelected(){
+            location.replace("yes.html")
+        }
+
+        function noSelected() {
+            const messages = ["Are you sure? :>", "Final?", "Really?", "Think again!"];
+            let counterClick = 0;
+
+            document.getElementById("No").onclick = function() {
+                counterClick++;
+                if (counterClick <= 5){
+                const randomIndex = Math.floor(Math.random() * messages.length);
+                document.getElementById("No").innerHTML = messages[randomIndex];
+            }
+            else if(counterClick == 6){
+                document.getElementById("No").innerHTML = "Last Chance!";
+            }
+            else if (counterClick == 7){
+                document.getElementById("No").innerHTML = "YES";
+            }
+            else {
+                location.replace("yes.html")
+            }
+            };
+        }
+        noSelected();
+    </script>
+</body>
+</html>
